@@ -13,11 +13,19 @@ class Productor {
 }
 
 const List<Productor> productores = [
-  Productor(nombre: 'Luis Martínez', vereda: 'La Esperanza', distanciaKm: 2.5),
-  Productor(nombre: 'Rosa Pérez', vereda: 'El Salitre', distanciaKm: 4.8),
-  Productor(nombre: 'Carlos Gómez', vereda: 'Buenavista', distanciaKm: 6.2),
-  Productor(nombre: 'Marta Rodríguez', vereda: 'San Isidro', distanciaKm: 7.5),
-  Productor(nombre: 'Jorge Castillo', vereda: 'La Palma', distanciaKm: 9.1),
+  Productor(
+    nombre: 'Finca La Esperanza',
+    vereda: 'El Retiro',
+    distanciaKm: 3.2,
+  ),
+  Productor(nombre: 'Huerta Doña Rosa', vereda: 'La Ceja', distanciaKm: 5.1),
+  Productor(nombre: 'Finca El Manantial', vereda: 'Rionegro', distanciaKm: 4.4),
+  Productor(nombre: 'Granja Los Alpes', vereda: 'Guarne', distanciaKm: 6.0),
+  Productor(
+    nombre: 'Cultivos San Isidro',
+    vereda: 'El Retiro',
+    distanciaKm: 2.8,
+  ),
 ];
 
 class PantallaInicio extends StatelessWidget {
