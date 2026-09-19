@@ -28,15 +28,40 @@ class PantallaInicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Inicio'),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: Text(
-          'Hola, $correo',
-          style: Theme.of(context).textTheme.titleLarge,
-        ),
+      appBar: AppBar(title: const Text('Inicio')),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16),
+            child: Text(
+              'Hola, $correo',
+              style: Theme.of(context).textTheme.titleLarge,
+            ),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: productores.length,
+              itemBuilder: (context, index) {
+                final productor = productores[index];
+                return Card(
+                  margin: const EdgeInsets.symmetric(
+                    horizontal: 16,
+                    vertical: 8,
+                  ),
+                  child: ListTile(
+                    title: Text(productor.nombre),
+                    subtitle: Text('Vereda ${productor.vereda}'),
+                    trailing: Text('${productor.distanciaKm} km'),
+                    onTap: () {
+                      // TODO: navegar al detalle del productor.
+                    },
+                  ),
+                );
+              },
+            ),
+          ),
+        ],
       ),
     );
   }
