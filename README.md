@@ -32,5 +32,11 @@ La pila se lee de abajo hacia arriba: la primera pantalla de la lista es la del 
 
 ### Ayudas usadas
 
+-  (IA): para resolver errores de compilación y revisar el código. Cada parte se revisó y se entendió
+  antes de commitear.
+- Imágenes: fotografías tomadas de internet, usadas solo como contenido de
+  demostración. Están en assets/imagenes/.
+- Documentación de Flutter: ListView.builder, Image.asset y declaración de assets
+  en pubspec.yaml.
 
 - Documentación de Flutter: Navigator, ListView.builder.
