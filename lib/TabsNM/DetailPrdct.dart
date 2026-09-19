@@ -47,7 +47,7 @@ class _DetalleProductoState extends State<DetalleProducto> {
         // Foto de portada (opcional)
         flexibleSpace: fotoPortada != null
             ? Image.network(
-                fotoPortada,
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxlJRGxYQTAgR96pZNFECtzyGpV8-0DGML61EC6pDRpQ&s=10',
                 fit: BoxFit.cover,
                 errorBuilder: (context, error, stackTrace) => Container(
                   color: Colors.grey[300],
