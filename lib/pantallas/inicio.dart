@@ -77,6 +77,22 @@ class PantallaInicio extends StatelessWidget {
                     vertical: 8,
                   ),
                   child: ListTile(
+                    leading: ClipRRect(
+                      borderRadius: BorderRadius.circular(8),
+                      child: Image.asset(
+                        productor.rutaImagen,
+                        width: 56,
+                        height: 56,
+                        fit: BoxFit.cover,
+                        errorBuilder: (context, error, stackTrace) {
+                          return const SizedBox(
+                            width: 56,
+                            height: 56,
+                            child: Icon(Icons.image_not_supported_outlined),
+                          );
+                        },
+                      ),
+                    ),
                     title: Text(productor.nombre),
                     subtitle: Text('Vereda ${productor.vereda}'),
                     trailing: Text('${productor.distanciaKm} km'),
