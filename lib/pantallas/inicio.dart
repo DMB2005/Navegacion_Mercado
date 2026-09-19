@@ -71,6 +71,27 @@ class PantallaInicio extends StatelessWidget {
           ),
         ],
       ),
+      bottomNavigationBar: NavigationBar(
+        selectedIndex: 0,
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home_outlined),
+            label: 'Inicio',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.receipt_long_outlined),
+            label: 'Pedidos',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.notifications_outlined),
+            label: 'Alertas',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.person_outline),
+            label: 'Cuenta',
+          ),
+        ],
+      ),
     );
   }
 }
