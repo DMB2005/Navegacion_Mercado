@@ -5,11 +5,13 @@ class Productor {
     required this.nombre,
     required this.vereda,
     required this.distanciaKm,
+    required this.rutaImagen,
   });
 
   final String nombre;
   final String vereda;
   final double distanciaKm;
+  final String rutaImagen;
 }
 
 const List<Productor> productores = [
@@ -17,14 +19,31 @@ const List<Productor> productores = [
     nombre: 'Finca La Esperanza',
     vereda: 'El Retiro',
     distanciaKm: 3.2,
+    rutaImagen: 'assets/imagenes/finca_la_esperanza.jpg',
   ),
-  Productor(nombre: 'Huerta Doña Rosa', vereda: 'La Ceja', distanciaKm: 5.1),
-  Productor(nombre: 'Finca El Manantial', vereda: 'Rionegro', distanciaKm: 4.4),
-  Productor(nombre: 'Granja Los Alpes', vereda: 'Guarne', distanciaKm: 6.0),
+  Productor(
+    nombre: 'Huerta Doña Rosa',
+    vereda: 'La Ceja',
+    distanciaKm: 5.1,
+    rutaImagen: 'assets/imagenes/huerta_dona_rosa.jpg',
+  ),
+  Productor(
+    nombre: 'Finca El Manantial',
+    vereda: 'Rionegro',
+    distanciaKm: 4.4,
+    rutaImagen: 'assets/imagenes/finca_el_manantial.jpg',
+  ),
+  Productor(
+    nombre: 'Granja Los Alpes',
+    vereda: 'Guarne',
+    distanciaKm: 6.0,
+    rutaImagen: 'assets/imagenes/granja_los_alpes.jpeg',
+  ),
   Productor(
     nombre: 'Cultivos San Isidro',
     vereda: 'El Retiro',
     distanciaKm: 2.8,
+    rutaImagen: 'assets/imagenes/cultivos_san_isidro.jpeg',
   ),
 ];
 
