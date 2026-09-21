@@ -63,7 +63,16 @@ class PantallaInicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Inicio')),
+      appBar: AppBar(
+        title: const Text('Inicio'),
+        automaticallyImplyLeading: false,
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cerrar sesión'),
+          ),
+        ],
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
