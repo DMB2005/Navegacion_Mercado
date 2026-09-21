@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navmarket/TabsNM/DetailPrdct.dart';
 
 class Productor {
   const Productor({
@@ -45,6 +46,13 @@ const List<Productor> productores = [
     distanciaKm: 2.8,
     rutaImagen: 'assets/imagenes/cultivos_san_isidro.jpeg',
   ),
+];
+
+const List<Map<String, dynamic>> productos = [
+  {'nombre': 'Tomate chonto', 'precio': 3200},
+  {'nombre': 'Lechuga crespa', 'precio': 1800},
+  {'nombre': 'Zanahoria criolla', 'precio': 2100},
+  {'nombre': 'Cilantro fresco', 'precio': 1200},
 ];
 
 class PantallaInicio extends StatelessWidget {
@@ -97,7 +105,18 @@ class PantallaInicio extends StatelessWidget {
                     subtitle: Text('Vereda ${productor.vereda}'),
                     trailing: Text('${productor.distanciaKm} km'),
                     onTap: () {
-                      // TODO: navegar al detalle del productor.
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetalleProducto(
+                            productor: {
+                              'nombre': productor.nombre,
+                              'vereda': 'Vereda ${productor.vereda}',
+                              'productos': productos,
+                            },
+                          ),
+                        ),
+                      );
                     },
                   ),
                 );
