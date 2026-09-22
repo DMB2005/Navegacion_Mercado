@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navmarket/pantallas/inicio.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -19,7 +20,12 @@ class _LoginScreenState extends State<LoginScreen> {
       );
       return;
     }
-    Navigator.pushNamed(context, '/inicio', arguments: _correo.text.trim());
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => PantallaInicio(correo: _correo.text.trim()),
+      ),
+    );
   }
 
   @override
