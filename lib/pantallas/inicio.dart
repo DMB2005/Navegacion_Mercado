@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:navmarket/TabsNM/DetailPrdct.dart';
 
 class Productor {
   const Productor({
@@ -47,6 +48,13 @@ const List<Productor> productores = [
   ),
 ];
 
+const List<Map<String, dynamic>> productos = [
+  {'nombre': 'Tomate chonto', 'precio': 3200},
+  {'nombre': 'Lechuga crespa', 'precio': 1800},
+  {'nombre': 'Zanahoria criolla', 'precio': 2100},
+  {'nombre': 'Cilantro fresco', 'precio': 1200},
+];
+
 class PantallaInicio extends StatelessWidget {
   const PantallaInicio({super.key, required this.correo});
 
@@ -55,7 +63,16 @@ class PantallaInicio extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Inicio')),
+      appBar: AppBar(
+        title: const Text('Inicio'),
+        automaticallyImplyLeading: false,
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.pop(context),
+            child: const Text('Cerrar sesión'),
+          ),
+        ],
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -97,7 +114,18 @@ class PantallaInicio extends StatelessWidget {
                     subtitle: Text('Vereda ${productor.vereda}'),
                     trailing: Text('${productor.distanciaKm} km'),
                     onTap: () {
-                      // TODO: navegar al detalle del productor.
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => DetalleProducto(
+                            productor: {
+                              'nombre': productor.nombre,
+                              'vereda': 'Vereda ${productor.vereda}',
+                              'productos': productos,
+                            },
+                          ),
+                        ),
+                      );
                     },
                   ),
                 );
